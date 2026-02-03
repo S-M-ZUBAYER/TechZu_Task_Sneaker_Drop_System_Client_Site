@@ -60,7 +60,7 @@ Built with **React**, **Vite**, **Zustand**, **Socket.IO**, and **Tailwind CSS**
 
 ### Prerequisites
 - **Node.js** 16+ and npm
-- **Backend Server** running on `http://localhost:5000`
+- **Backend Server** running on `https://techzutasksneakerdropsystemserversite-production.up.railway.app`
 
 ### Steps
 
@@ -186,10 +186,10 @@ Dashboard shows all drops with:
 
 ```env
 # API Base URL
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=https://techzutasksneakerdropsystemserversite-production.up.railway.app
 
 # Socket.IO URL
-VITE_SOCKET_URL=http://localhost:5000
+VITE_SOCKET_URL=https://techzutasksneakerdropsystemserversite-production.up.railway.app
 ```
 
 ### Vite Proxy (for CORS)
@@ -199,11 +199,11 @@ Already configured in `vite.config.js`:
 ```javascript
 proxy: {
   '/api': {
-    target: 'http://localhost:5000',
+    target: 'https://techzutasksneakerdropsystemserversite-production.up.railway.app',
     changeOrigin: true,
   },
   '/socket.io': {
-    target: 'http://localhost:5000',
+    target: 'https://techzutasksneakerdropsystemserversite-production.up.railway.app',
     ws: true,
   }
 }
@@ -391,7 +391,7 @@ cd sneaker-drop-backend
 npm run dev
 
 # Check if running on port 5000
-curl http://localhost:5000/health
+curl https://techzutasksneakerdropsystemserversite-production.up.railway.app/health
 ```
 
 ### Issue: Socket.IO not connecting
@@ -401,7 +401,7 @@ curl http://localhost:5000/health
 // Check vite.config.js proxy settings
 proxy: {
   '/socket.io': {
-    target: 'http://localhost:5000',
+    target: 'https://techzutasksneakerdropsystemserversite-production.up.railway.app',
     ws: true,  // Important!
   }
 }
